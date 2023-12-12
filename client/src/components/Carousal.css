@@ -1,0 +1,11 @@
+img {
+  height: 90vh;
+  width: auto;
+  max-width: 100vw;
+}
+.search {
+  margin-left: 140px;
+  display: flex;
+  justify-content: center;
+  width: 500px;
+}
