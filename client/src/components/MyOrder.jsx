@@ -6,7 +6,7 @@ import { useState } from "react";
 const MyOrder = () => {
   const [orderData, setOrderData] = useState("");
   const getOrder = async () => {
-    await fetch("http://localhost:4000/getorder", {
+    await fetch("https://food-hub-1246.onrender.com/getorder", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -55,15 +55,6 @@ const MyOrder = () => {
                                       maxHeight: "360px",
                                     }}
                                   >
-                                    <img
-                                      src={arrayData.img}
-                                      className="card-img-top"
-                                      alt="..."
-                                      style={{
-                                        height: "120px",
-                                        objectFit: "fill",
-                                      }}
-                                    />
                                     <div className="card-body">
                                       <h5 className="card-title">
                                         {arrayData.name}

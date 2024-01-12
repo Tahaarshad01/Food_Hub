@@ -14,7 +14,7 @@ const Cart = () => {
   }
   const handleCheckout = async () => {
     let userEmail = localStorage.getItem("userEmail");
-    let response = await fetch("http://localhost:4000/order", {
+    let response = await fetch("https://food-hub-1246.onrender.com/order", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
