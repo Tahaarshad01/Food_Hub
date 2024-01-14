@@ -25,7 +25,7 @@ const Home = () => {
     let response = await fetch("https://food-hub-1246.onrender.com/data", {
       method: "POST",
       headers: {
-        "Content-Type": "application/josn",
+        "Content-Type": "application/json",
       },
     });
     response = await response.json();
@@ -52,7 +52,7 @@ const Home = () => {
           <div className="carousel-inner" id="carousel">
             <div className="carousel-caption" style={{ zIndex: 1 }}>
               <div className="d-flex justify-center row">
-                <div className="search col-4 col-md-2 col-sm-1 mb-80">
+                <div className="search col-4 col-md-2 col-sm-1 mb-80 mr-6 text-center">
                   <input
                     className="form-control me-2"
                     type="search"
@@ -105,7 +105,6 @@ const Home = () => {
             <span className="visually-hidden">Next</span>
           </button>
         </div>
-        />
       </div>
       <div>
         {foodCategory !== []
@@ -127,14 +126,16 @@ const Home = () => {
                         return (
                           <div
                             key={filterItems._id}
-                            className="col-12 col-md-6 col-lg-3"
+                            className="col-12 col-md-6 col-lg-3 mt-5"
                           >
-                            <Card
-                              foodItem={filterItems}
-                              // Name={filterItems.name}
-                              // foodImage={filterItems.img}
-                              options={filterItems.options[0]}
-                            />
+                            <div className="ml-5">
+                              <Card
+                                foodItem={filterItems}
+                                // Name={filterItems.name}
+                                // foodImage={filterItems.img}
+                                options={filterItems.options[0]}
+                              />
+                            </div>
                           </div>
                         );
                       })

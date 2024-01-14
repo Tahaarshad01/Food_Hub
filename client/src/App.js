@@ -6,16 +6,17 @@ import Login from "./components/Login";
 import Checkout from "./components/Checkout";
 import { CartProvider } from "./hooks/UseReducer.js";
 import MyOrder from "./components/MyOrder.jsx";
+import "./App.css";
 
 const App = () => {
-  return (
+  return (  
     <CartProvider>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Login />}></Route>
           <Route path="/signup" element={<SignUp />}></Route>
-          <Route path="/checkout" element={<Checkout />}></Route>
           <Route path="/home" element={<Home />}></Route>
+          <Route path="/checkout" element={<Checkout />}></Route>
           <Route path="/myorder" element={<MyOrder />}></Route>
         </Routes>
       </BrowserRouter>

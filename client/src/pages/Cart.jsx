@@ -8,7 +8,7 @@ const Cart = () => {
   if (data.length === 0) {
     return (
       <div>
-        <div className="m-5 w-100 text-center fs-3">The Cart is Empty</div>
+        <div className="m-5 w-95 text-center fs-3">The Cart is Empty</div>
       </div>
     );
   }
@@ -32,10 +32,10 @@ const Cart = () => {
   };
   let totalPrice = data.reduce((total, food) => total + food.price, 0);
   return (
-    <div>
-      <div className="cointainer m-auto mt-5 table responsive table-responsive-sm table-reponsive-md">
+    <div className="Container mt-5">
+      <div className="table-responsive">
         <table className="table table-hover">
-          <thead className="text success fs-4">
+          <thead className="text-success fs-4">
             <tr>
               <th scope="col">#</th>
               <th scope="col">Name</th>
@@ -67,16 +67,14 @@ const Cart = () => {
               </tr>
             ))}
           </tbody>
-          <div>
-            <h1 className="fs-2">total price:{totalPrice}</h1>
-          </div>
-          <div>
-            <button className="btn bg success mt-5" onClick={handleCheckout}>
-              Check out
-            </button>
-          </div>
-          <div></div>
         </table>
+
+        <div className="text-center fs-2">Total Price: {totalPrice}</div>
+        <div className="text-center mt-3">
+          <button className="btn btn-success" onClick={handleCheckout}>
+            Check out
+          </button>
+        </div>
       </div>
     </div>
   );

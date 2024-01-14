@@ -39,7 +39,6 @@ function classNames(...classNamees) {
 }
 
 const Navbar = ({ children, onClose }) => {
-  
   let data = useCart();
   const [CartView, setCartView] = useState(false);
   return (
@@ -58,8 +57,8 @@ const Navbar = ({ children, onClose }) => {
                     <div className="flex-shrink-0">
                       <Link to="/home">
                         <img
-                          className="h-8 w-8"
-                          src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                          className="h-8 w-8 rounded-lg"
+                          src="https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/30/0d/ed/300deda5-5ea1-7220-f3af-3fd6d9dbad94/app-icon-1x_U007emarketing-0-10-0-85-220.png/230x0w.webp"
                           alt="Your Company"
                         />
                       </Link>
@@ -211,10 +210,13 @@ const Navbar = ({ children, onClose }) => {
                         {user.email}
                       </div>
                     </div>
-                    <Link to="/cart">
+                    <Link>
                       <button
                         type="button"
                         className="relative ml-auto flex-shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                        onClick={() => {
+                          setCartView(true);
+                        }}
                       >
                         <span className="absolute -inset-1.5" />
                         <ShoppingCartIcon
@@ -224,8 +226,17 @@ const Navbar = ({ children, onClose }) => {
                       </button>
                     </Link>
                     <span className="inline-flex items-center rounded-md mb-5 -ml-3 z-10 bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-inset ring-green-600/20">
-                      8
+                      {data.length}
                     </span>
+                    {CartView ? (
+                      <Model
+                        onClose={() => {
+                          setCartView(false);
+                        }}
+                      >
+                        <Cart />
+                      </Model>
+                    ) : null}
                   </div>
                   <div className="mt-3 space-y-1 px-2">
                     {userNavigation.map((item) => (
