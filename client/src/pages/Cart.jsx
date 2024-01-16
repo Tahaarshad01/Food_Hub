@@ -35,11 +35,11 @@ const Cart = () => {
     <div className="Container mt-5">
       <div className="table-responsive">
         <table className="table table-hover">
-          <thead className="text-success fs-4">
+          <thead className="text-success fs-10">
             <tr>
-              <th scope="col">#</th>
+              <th scope="col">S.No</th>
               <th scope="col">Name</th>
-              <th scope="col">Quantity</th>
+              <th scope="col">Qty</th>
               <th scope="col">Option</th>
               <th scope="col">Amount</th>
               <th scope="col"></th>

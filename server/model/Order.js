@@ -13,5 +13,4 @@ const OrderSchema = new mongoose.Schema({
 });
 
 const Order = mongoose.model("orderDetails", OrderSchema);
-
 export default Order;

@@ -62,7 +62,7 @@ export const loginUser = async (req, res) => {
     const authToken = jwt.sign(data, jwtSecret);
     res.send({ message: "LoggedIn succesfully", authToken: authToken });
   } catch (error) {
-    return res.status(500).json(error.message);
+    return res.status(300).json(error.message);
   }
 };
 

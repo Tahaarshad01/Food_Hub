@@ -25,7 +25,7 @@ const Home = () => {
     let response = await fetch("https://food-hub-1246.onrender.com/data", {
       method: "POST",
       headers: {
-        "Content-Type": "application/json",
+        "Content-Type": "application/josn",
       },
     });
     response = await response.json();
@@ -52,7 +52,7 @@ const Home = () => {
           <div className="carousel-inner" id="carousel">
             <div className="carousel-caption" style={{ zIndex: 1 }}>
               <div className="d-flex justify-center row">
-                <div className="search col-4 col-md-2 col-sm-1 mb-80 mr-6 text-center">
+                <div className="search col-6 col-md-1 col-sm-1 col-lg-6 mb-80 mr-10 text-center">
                   <input
                     className="form-control me-2"
                     type="search"
@@ -107,15 +107,13 @@ const Home = () => {
         </div>
       </div>
       <div>
-        {foodCategory !== []
+        {foodCategory.length > 0
           ? foodCategory.map((data) => {
               return (
-                <div className="mb-3 row">
-                  <div key={data._id} className="fs-3 m-3">
-                    {data.CategoryName}
-                  </div>
+                <div className="mb-3 row" key={data._id}>
+                  <div className="fs-3 m-3">{data.CategoryName}</div>
                   <hr />
-                  {foodItem !== [] ? (
+                  {foodItem.length > 0 ? (
                     foodItem
                       .filter(
                         (item) =>
@@ -131,8 +129,6 @@ const Home = () => {
                             <div className="ml-5">
                               <Card
                                 foodItem={filterItems}
-                                // Name={filterItems.name}
-                                // foodImage={filterItems.img}
                                 options={filterItems.options[0]}
                               />
                             </div>
@@ -147,6 +143,7 @@ const Home = () => {
             })
           : ""}
       </div>
+
       <div>
         <Footer />
       </div>

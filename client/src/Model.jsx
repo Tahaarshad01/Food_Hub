@@ -8,7 +8,7 @@ const Model = ({ children, onClose }) => {
   const Model_styles = {
     position: "fixed",
     top: "50%",
-    left: "47%",
+    left: "49%",
     backgroundColor: "#BCC6CC",
     transform: "translate(-50%, -50%)",
     zIndex: "10",
