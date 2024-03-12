@@ -1,9 +1,11 @@
 import React from "react";
 import { FaTrash } from "react-icons/fa";
 import { useCart, useDispatchCart } from "../hooks/UseReducer";
+import axios from "axios";
 
 const Cart = () => {
   let data = useCart();
+  axios.defaults.withCredentials = true;
   let dispatch = useDispatchCart();
   if (data.length === 0) {
     return (
@@ -14,7 +16,7 @@ const Cart = () => {
   }
   const handleCheckout = async () => {
     let userEmail = localStorage.getItem("userEmail");
-    let response = await fetch("http://localhost:4000/order", {
+    let response = await fetch("food-hub-theta.vercel.app/order", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

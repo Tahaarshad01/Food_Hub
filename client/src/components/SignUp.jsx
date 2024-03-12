@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Login.css";
+import axios from "axios";
 
 const SignUp = () => {
   const navigate = useNavigate();
@@ -10,11 +11,12 @@ const SignUp = () => {
     password: "",
     location: "",
   });
+  axios.defaults.withCredentials = true;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     const { name, email, password, location } = state;
-    const response = await fetch("http://localhost:4000/register", {
+    const response = await fetch("food-hub-theta.vercel.app/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

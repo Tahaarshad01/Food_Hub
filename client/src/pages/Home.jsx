@@ -11,6 +11,7 @@ import Pasta from "../assets/penne-pasta-tomato-sauce-with-chicken-tomatoes-wood
 import Grilled from "../assets/flame-grilled-meat-cooking-flames-generative-ai.jpg";
 import Burger from "../assets/exploding-burger-with-vegetables-melted-cheese-black-background-generative-ai.jpg";
 import "../components/Carousal.css";
+import axios from "axios";
 
 const Home = () => {
   const [search, setSearch] = useState("");
@@ -20,9 +21,9 @@ const Home = () => {
   const onChange = (e) => {
     setSearch(e.target.value);
   };
-
+  axios.defaults.withCredentials = true;
   const loadData = async () => {
-    let response = await fetch("http://localhost:4000/data", {
+    let response = await fetch("food-hub-theta.vercel.app/data", {
       method: "POST",
       headers: {
         "Content-Type": "application/josn",

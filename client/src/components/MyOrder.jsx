@@ -2,11 +2,13 @@ import React, { useEffect } from "react";
 import Navbar from "./Navbar.jsx";
 import Footer from "./Footer.jsx";
 import { useState } from "react";
+import axios from "axios";
 
 const MyOrder = () => {
   const [orderData, setOrderData] = useState("");
+  axios.defaults.withCredentials = true;
   const getOrder = async () => {
-    await fetch("http://localhost:4000/getorder", {
+    await fetch("food-hub-theta.vercel.app/getorder", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
