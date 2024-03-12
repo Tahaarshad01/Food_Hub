@@ -7,11 +7,11 @@ import cors from "cors";
 const app = express();
 app.use(
   cors(
-  //   {
-  //   origin: ["https://deploy."],
-  //   methods: ["POST", "GET"],
-  //   credentials: true,
-  // }
+    {
+    origin: ["https://food-hub-client.vercel.app"],
+    methods: ["POST", "GET"],
+    credentials: true,
+  }
   )
 );
 app.use(express.json());
