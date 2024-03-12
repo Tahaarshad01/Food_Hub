@@ -22,7 +22,7 @@ const Home = () => {
   };
 
   const loadData = async () => {
-    let response = await fetch("https://food-hub-1246.onrender.com/data", {
+    let response = await fetch("http://localhost:4000/data", {
       method: "POST",
       headers: {
         "Content-Type": "application/josn",

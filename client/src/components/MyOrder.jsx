@@ -6,7 +6,7 @@ import { useState } from "react";
 const MyOrder = () => {
   const [orderData, setOrderData] = useState("");
   const getOrder = async () => {
-    await fetch("https://food-hub-1246.onrender.com/getorder", {
+    await fetch("http://localhost:4000/getorder", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

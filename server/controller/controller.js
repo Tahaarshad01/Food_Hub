@@ -40,9 +40,7 @@ export const loginUser = async (req, res) => {
   try {
     let usermail = await Food.findOne({ email });
     if (!usermail) {
-      return res
-        .status(400)
-        .json({ error: "Please Enter Register Email and Password" });
+      return res.status(400).json({ error: "Invalid email or password" });
     }
 
     const passwordCompare = await bcrypt.compare(
@@ -60,9 +58,10 @@ export const loginUser = async (req, res) => {
       },
     };
     const authToken = jwt.sign(data, jwtSecret);
-    res.send({ message: "LoggedIn succesfully", authToken: authToken });
+    res.send({ message: "LoggedIn successfully", authToken: authToken });
   } catch (error) {
-    return res.status(300).json(error.message);
+    console.error(error);
+    return res.status(500).json({ error: "Internal Server Error", details: error.message });
   }
 };
 

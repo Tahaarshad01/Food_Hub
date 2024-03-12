@@ -8,9 +8,13 @@ const PASSWORD = process.env.DB_PASSWORD;
 
 const Connection = async () => {
   try {
-    const URI = `mongodb+srv://${USERNAME}:${PASSWORD}@cluster0.bigdaln.mongodb.net/food_hub?retryWrites=true&w=majority`;
+    // const URI = `mongodb+srv://${USERNAME}:${PASSWORD}@cluster0.bigdaln.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
+    const URI = `mongodb+srv://${USERNAME}:${PASSWORD}@cluster0.qbiivdp.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
 
-    await mongoose.connect(URI, { useNewUrlParser: true });
+    await mongoose.connect(URI, {
+      // useNewUrlParser: true,
+      // useUnifiedTopology: true,
+    });
     console.log("Database connected");
 
     const fetchData = mongoose.connection.db.collection("food");
@@ -23,7 +27,7 @@ const Connection = async () => {
     global.foodCategory = catData;
     console.log(catData);
   } catch (error) {
-    console.error("Failed to connect to the database:", error);
+    console.error("Failed to connect to the database:", error.message);
   }
 };
 
