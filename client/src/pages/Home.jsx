@@ -23,7 +23,7 @@ const Home = () => {
   };
   axios.defaults.withCredentials = true;
   const loadData = async () => {
-    let response = await fetch("food-hub-theta.vercel.app/data", {
+    let response = await fetch("food-hub-backend-three.vercel.app/data", {
       method: "POST",
       headers: {
         "Content-Type": "application/josn",

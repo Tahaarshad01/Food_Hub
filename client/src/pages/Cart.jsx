@@ -16,7 +16,7 @@ const Cart = () => {
   }
   const handleCheckout = async () => {
     let userEmail = localStorage.getItem("userEmail");
-    let response = await fetch("food-hub-theta.vercel.app/order", {
+    let response = await fetch("food-hub-backend-three.vercel.app/order", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

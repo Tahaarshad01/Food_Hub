@@ -16,7 +16,7 @@ const SignUp = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const { name, email, password, location } = state;
-    const response = await fetch("food-hub-theta.vercel.app/register", {
+    const response = await fetch("food-hub-backend-three.vercel.app/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
