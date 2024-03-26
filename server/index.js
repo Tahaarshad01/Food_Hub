@@ -6,13 +6,13 @@ import cors from "cors";
 
 const app = express();
 
-const corsConfig = {
-  origin: "*",
-  Credential: true,
-  methods: ["GET", "POST", "PUT", "DELETE"],
-};
-app.options("", cors(corsConfig))
-app.use(cors(corsConfig));
+// const corsConfig = {
+//   origin: "*",
+//   Credential: true,
+//   methods: ["GET", "POST", "PUT", "DELETE"],
+// };
+// app.options("", cors(corsConfig))
+app.use(cors());
 //   {
 //   origin: ["https://food-hub-client.vercel.app"],
 //   methods: ["POST", "GET"],
