@@ -6,13 +6,18 @@ import cors from "cors";
 
 const app = express();
 app.use(
-  cors()
-  //   {
-  //   origin: ["https://food-hub-client.vercel.app"],
-  //   methods: ["POST", "GET"],
-  //   credentials: true,
-  // }
+  cors({
+    origin:
+      "https://66022f3c3cb4907ffe051176--gentle-kashata-454516.netlify.app",
+  })
 );
+
+//   {
+//   origin: ["https://food-hub-client.vercel.app"],
+//   methods: ["POST", "GET"],
+//   credentials: true,
+// }
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use("/", routes);
