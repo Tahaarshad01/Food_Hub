@@ -5,13 +5,14 @@ import OrderRoutes from "./routes/OrderRoutes.js";
 import cors from "cors";
 
 const app = express();
-app.use(
-  cors({
-    origin:
-      "https://66022f3c3cb4907ffe051176--gentle-kashata-454516.netlify.app",
-  })
-);
 
+const corsConfig = {
+  origin: "*",
+  Credential: true,
+  methods: ["GET", "POST", "PUT", "DELETE"],
+};
+app.options("", cors(corsConfig))
+app.use(cors(corsConfig));
 //   {
 //   origin: ["https://food-hub-client.vercel.app"],
 //   methods: ["POST", "GET"],
