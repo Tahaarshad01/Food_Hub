@@ -16,7 +16,7 @@ const SignUp = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const { name, email, password, location } = state;
-    const response = await fetch("https://food-hub-1246.onrender.com/register", {
+    const response = await fetch("https://food-hub-backend-three.vercel.app/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -16,7 +16,7 @@ const Cart = () => {
   }
   const handleCheckout = async () => {
     let userEmail = localStorage.getItem("userEmail");
-    let response = await fetch("https://food-hub-1246.onrender.com/order", {
+    let response = await fetch("https://food-hub-backend-three.vercel.app/order", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
