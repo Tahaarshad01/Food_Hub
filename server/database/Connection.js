@@ -9,8 +9,8 @@ const PASSWORD = process.env.DB_PASSWORD;
 const Connection = async () => {
   try {
     // const URI = `mongodb+srv://${USERNAME}:${PASSWORD}@cluster0.bigdaln.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
-    // const URI = `mongodb+srv://${USERNAME}:${PASSWORD}@cluster0.qbiivdp.mongodb.net/test?retryWrites=true&w=majority&appName=Cluster0`;
-    const URI = process.env.URL;
+    const URI = `mongodb+srv://${USERNAME}:${PASSWORD}@cluster0.qbiivdp.mongodb.net/test?retryWrites=true&w=majority&appName=Cluster0`;
+    // const URI = process.env.URL;
 
     await mongoose.connect(URI, {
       // useNewUrlParser: true,
