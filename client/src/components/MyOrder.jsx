@@ -8,7 +8,7 @@ const MyOrder = () => {
   const [orderData, setOrderData] = useState("");
   axios.defaults.withCredentials = true;
   const getOrder = async () => {
-    await fetch("https://food-hub-1246.onrender.com//getorder", {
+    await fetch("https://food-hub-1246.onrender.com/getorder", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -13,7 +13,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const { email, password } = state;
-    const response = await fetch("https://food-hub-1246.onrender.com//login", {
+    const response = await fetch("https://food-hub-1246.onrender.com/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
