@@ -8,7 +8,7 @@ const MyOrder = () => {
   const [orderData, setOrderData] = useState("");
   axios.defaults.withCredentials = true;
   const getOrder = async () => {
-    await fetch("https://food-hub-backend-three.vercel.app/getorder", {
+    await fetch("http://localhost:4000/getorder", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

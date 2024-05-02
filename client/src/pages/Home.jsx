@@ -23,7 +23,7 @@ const Home = () => {
   };
   axios.defaults.withCredentials = true;
   const loadData = async () => {
-    let response = await fetch("https://food-hub-backend-three.vercel.app/data", {
+    let response = await fetch("http://localhost:4000/data", {
       method: "POST",
       headers: {
         "Content-Type": "application/josn",
