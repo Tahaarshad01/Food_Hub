@@ -1,6 +1,6 @@
 import Food from "../model/Food.js";
 import { body, validationResult } from "express-validator";
-import bcrypt from "bcrypt";
+import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 
 const jwtSecret = "tahaarshad13111999";
