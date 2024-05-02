@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.231b6e4d.css",
+    "main.js": "/static/js/main.600f1a10.js",
+    "static/js/787.d5fa4d18.chunk.js": "/static/js/787.d5fa4d18.chunk.js",
+    "static/media/penne-pasta-tomato-sauce-with-chicken-tomatoes-wooden-table.jpg": "/static/media/penne-pasta-tomato-sauce-with-chicken-tomatoes-wooden-table.3ab953cce31f09f6a518.jpg",
+    "static/media/exploding-burger-with-vegetables-melted-cheese-black-background-generative-ai.jpg": "/static/media/exploding-burger-with-vegetables-melted-cheese-black-background-generative-ai.f19c743241094514b835.jpg",
+    "static/media/flame-grilled-meat-cooking-flames-generative-ai.jpg": "/static/media/flame-grilled-meat-cooking-flames-generative-ai.f949863f6038e6f71f3a.jpg",
+    "index.html": "/index.html",
+    "main.231b6e4d.css.map": "/static/css/main.231b6e4d.css.map",
+    "main.600f1a10.js.map": "/static/js/main.600f1a10.js.map",
+    "787.d5fa4d18.chunk.js.map": "/static/js/787.d5fa4d18.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.231b6e4d.css",
+    "static/js/main.600f1a10.js"
+  ]
+}
